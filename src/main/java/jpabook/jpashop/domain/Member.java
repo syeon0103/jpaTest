@@ -1,6 +1,7 @@
 package jpabook.jpashop.domain;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotEmpty;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,6 +17,7 @@ public class Member {
     @Column(name = "member_id")
     private Long id;
 
+    @NotEmpty //빈값 x
     private String name;
 
     @Embedded //내장타입 둘 중 하나만 넣어도 되지만 보통 두 개 다 함
